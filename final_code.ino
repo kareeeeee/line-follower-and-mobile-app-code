@@ -117,17 +117,12 @@ void loop() {
 
   if( (leftsensor_read ==1 && centersensor_read ==0 && rightsensor_read ==0)  || (leftsensor_read ==0 && centersensor_read ==0 && rightsensor_read ==1))
   {
-               //Right or Forward(Available)                                   //Left or Forward(Available)  
-                    //                                                                //
-                    //                                                                //
-                    //                                                                // 
-                    //                                                                //
-                    //////////                                                /////////                     
-                                                                                                            //
-    turn_right();  //can add a delay with the value of 90 deg.                                              //
-  }                                                                                                         //
-                                                                                                            //
-  if(leftsensor_read ==0 && centersensor_read ==0 && rightsensor_read ==0)                    ///////////////////////////////
+               //Right or Forward(Available)                                   //Left or Forward(Available)                
+                                                                                                            
+    turn_right();  //can add a delay with the value of 90 deg.                                              
+  }     
+    
+  if(leftsensor_read ==0 && centersensor_read ==0 && rightsensor_read ==0)                   
   {
     //Left or Forward or Right or END(Available)
     if(forward == 1){
@@ -159,7 +154,7 @@ void loop() {
         move_back();
         delay(1000);
         turn_left();
-        delay(1000);  //test with 90 deg.
+        delay(1000);  //turn with 90 deg.
         right =0;} 
       else if(right ==1){
         move_forward();
@@ -169,7 +164,7 @@ void loop() {
 
     if(right==0){
       turn_left();
-      delay(1000);    //test with 90 deg.
+      delay(1000);    //turn with 90 deg.
       move_forward();
       delay(1000);
       leftsensor_read =digitalRead(leftsensor);
@@ -179,7 +174,7 @@ void loop() {
         move_back();
         delay(1000);
         turn_right();
-        delay(1000);  //test with 90
+        delay(1000);  //turn with 90
         left =0;}
       else if(left ==1 ){
         move_forward();
