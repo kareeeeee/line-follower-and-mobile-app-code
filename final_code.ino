@@ -96,22 +96,22 @@ void loop() {
   //conditions
   if(leftsensor_read ==1 && centersensor_read ==0 && rightsensor_read ==1)    
   {
-    move_forward();   //done
+    move_forward();   
   } 
 
   if(leftsensor_read ==1 && centersensor_read ==1 && rightsensor_read ==0)
   {
-    turn_right();     //done 
+    turn_right();     
   }
 
   if(leftsensor_read ==0 && centersensor_read ==1 && rightsensor_read ==1)
   { 
-    turn_left();      //done
+    turn_left();      
   }
 
   if(leftsensor_read ==1 && centersensor_read ==1 && rightsensor_read ==1)
   {
-    U_turn();       //done
+    U_turn();       
 
   }
 
